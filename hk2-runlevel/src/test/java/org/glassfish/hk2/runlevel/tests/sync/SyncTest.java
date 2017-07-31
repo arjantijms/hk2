@@ -1,7 +1,7 @@
 /*
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
  *
- * Copyright (c) 2013-2017 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2013-2015 Oracle and/or its affiliates. All rights reserved.
  *
  * The contents of this file are subject to the terms of either the GNU
  * General Public License Version 2 only ("GPL") or the Common Development
@@ -42,12 +42,9 @@ package org.glassfish.hk2.runlevel.tests.sync;
 
 import java.util.List;
 
-import org.glassfish.hk2.api.Context;
 import org.glassfish.hk2.api.ServiceLocator;
-import org.glassfish.hk2.runlevel.RunLevelContext;
 import org.glassfish.hk2.runlevel.RunLevelController;
 import org.glassfish.hk2.runlevel.tests.utilities.Utilities;
-import org.glassfish.hk2.runlevel.tests.utilities.Utilities.InitType;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -59,24 +56,6 @@ public class SyncTest {
     public final static String SERVICE_ONE = "One";
     public final static String SERVICE_TEN = "Ten";
     public final static String SERVICE_TWENTY = "Twenty";
-    
-    @Test
-    public void testNamedContextViaDynamicAddition() {
-        ServiceLocator locator = Utilities.getServiceLocator(InitType.DYNAMIC);
-        Assert.assertNotNull(locator.getService(Context.class, RunLevelContext.CONTEXT_NAME));
-    }
-    
-    @Test
-    public void testNamedContextViaUtilities() {
-        ServiceLocator locator = Utilities.getServiceLocator(InitType.UTILITIES);
-        Assert.assertNotNull(locator.getService(Context.class, RunLevelContext.CONTEXT_NAME));
-    }
-    
-    @Test
-    public void testNamedContextViaEDSL() {
-        ServiceLocator locator = Utilities.getServiceLocator(InitType.MODULE);
-        Assert.assertNotNull(locator.getService(Context.class, RunLevelContext.CONTEXT_NAME));
-    }
     
     /**
      * This tests that things truly happen on the thread passed in

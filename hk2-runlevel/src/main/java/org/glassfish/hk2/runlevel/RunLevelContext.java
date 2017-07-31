@@ -1,7 +1,7 @@
 /*
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
  *
- * Copyright (c) 2013-2017 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2013-2015 Oracle and/or its affiliates. All rights reserved.
  *
  * The contents of this file are subject to the terms of either the GNU
  * General Public License Version 2 only ("GPL") or the Common Development
@@ -43,7 +43,6 @@ package org.glassfish.hk2.runlevel;
 import java.lang.annotation.Annotation;
 
 import javax.inject.Inject;
-import javax.inject.Named;
 
 import org.glassfish.hk2.api.ActiveDescriptor;
 import org.glassfish.hk2.api.Context;
@@ -60,11 +59,8 @@ import org.jvnet.hk2.annotations.Service;
  * @author jwells
  *
  */
-@Service @Named(RunLevelContext.CONTEXT_NAME) @Visibility(DescriptorVisibility.LOCAL)
+@Service @Visibility(DescriptorVisibility.LOCAL)
 public class RunLevelContext implements Context<RunLevel> {
-    /** The name under which this context will be advertised */
-    public static final String CONTEXT_NAME = "DefaultRunLevelContext";
-    
     private final AsyncRunLevelContext asyncRunLevelContext;
     
     @Inject
