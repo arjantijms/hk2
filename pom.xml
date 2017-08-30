@@ -159,11 +159,11 @@
         <javax.json.version>1.0</javax.json.version>
         <glassfish.json.version>1.0.4</glassfish.json.version>
         <java.net.username>${user.name}</java.net.username>
-        <hibernate-validator.version>6.0.0.CR3</hibernate-validator.version>
+        <hibernate-validator.version>6.0.2.Final</hibernate-validator.version>
         <hibernate-validator.version.upperbound>7</hibernate-validator.version.upperbound>
-        <javax.validation.version>2.0.0.CR3</javax.validation.version>
+        <javax.validation.version>2.0.0.Final</javax.validation.version>
         <javax.validation.version.upperbound>3</javax.validation.version.upperbound>
-        <javax.validation.osgi.version>2.0.0.CR3</javax.validation.osgi.version>
+        <javax.validation.osgi.version>2.0.0.Final</javax.validation.osgi.version>
         <javax.el.version>3.0.1-b04</javax.el.version>
         <jtype.version>0.1.0</jtype.version>
         <javassist.version>3.22.0-CR2</javassist.version>
@@ -185,12 +185,10 @@
         <javax.servlet.version>3.1.0</javax.servlet.version>
         <javax.ws.rs.version>2.0</javax.ws.rs.version>
         <javax.jsr311.version>1.1.1</javax.jsr311.version>
-        <javax.validation.version>2.0.0.CR3</javax.validation.version>
         <classmate.version>1.3.3</classmate.version>
         <springcontext.version>4.3.9.RELEASE</springcontext.version>
         <guice.version>4.1.0</guice.version>
         <hk2.mvn.plugins.version>2.5.0-b42</hk2.mvn.plugins.version>
-
         <findbugs.exclude />
         <findbugs.threshold>High</findbugs.threshold>
         <surefireArgLineExtra />
